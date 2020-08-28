@@ -78,6 +78,12 @@ Tirthajyoti Ghosh - [@terrific_ghosh](https://twitter.com/terrific_ghosh) - itir
 
 Project Link: [https://github.com/tirthajyoti-ghosh/react-calculator](https://github.com/tirthajyoti-ghosh/react-calculator)
 
+<!-- ACKNOWLEDEGEMENT -->
+
+## Acknowledgement
+
+Font used Brix Sans. Made by Hannes von Doehren, Livius Dietzel.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/tirthajyoti-ghosh/weather-app.svg?style=flat-square
