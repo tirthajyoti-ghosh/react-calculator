@@ -5,6 +5,7 @@ body {
   font-family: Brix Sans, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 0;
 }
 
 code {

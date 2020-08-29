@@ -5,7 +5,7 @@ import Display from './Display';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App mdl-card mdl-shadow--2dp">
       <Display />
       <ButtonPanel />
     </div>

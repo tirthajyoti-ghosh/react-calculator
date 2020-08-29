@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Button(props) {
   const { name } = props;
-  return <button type="button">{name}</button>;
+  return <button type="button" className="mdl-button mdl-js-button mdl-js-ripple-effect">{name}</button>;
 }
 
 Button.propTypes = {
