@@ -21,8 +21,9 @@
 
 .mdl-button {
   color: #6a6972;
-  border-radius: 50%;
-  width: 20%;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  width: 25%;
   height: 80px;
   margin: 0 2.5%;
   padding: 15px;
