@@ -5,7 +5,7 @@ function Button(props) {
   const { name, wide, color } = props;
 
   const style = {
-    width: wide ? '50%' : '',
+    width: wide ? '61%' : '', // width increased to 61% just to make orange buttons line up properly
     backgroundColor: color ? '' : 'orange'
   };
 
