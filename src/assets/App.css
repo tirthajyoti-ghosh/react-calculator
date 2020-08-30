@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  height: 500px;
+  height: 600px;
   width: 700px;
   margin: 15vh auto;
 }
@@ -8,15 +8,19 @@
 .display {
   height: 100px;
   background-color: grey;
+  color: white;
+  font-size: 60px;
+  text-align: right;
+  padding: 20px;
 }
 
 .button-panel {
-  height: 400px;
+  height: 500px;
 }
 
 .row {
   display: flex;
-  height: 20%;
+  height: 100px;
   align-items: center;
 }
 
@@ -25,7 +29,7 @@
   border: 1px solid #e5e5e5;
   border-radius: 0;
   width: 25%;
-  height: 80px;
+  height: 100px;
   padding: 15px;
   font-size: 2rem;
   text-transform: none;
