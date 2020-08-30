@@ -3,34 +3,34 @@ import Button from './Button';
 
 function ButtonPanel() {
   return (
-    <div>
-      <div>
-        <Button name="AC" />
-        <Button name="+/-" />
-        <Button name="%" />
-        <Button name="/" />
+    <div className="button-panel">
+      <div className="row">
+        <Button name="AC" color />
+        <Button name="+/-" color />
+        <Button name="%" color />
+        <Button name="÷" />
       </div>
-      <div>
-        <Button name="7" />
-        <Button name="8" />
-        <Button name="9" />
-        <Button name="X" />
+      <div className="row">
+        <Button name="7" color />
+        <Button name="8" color />
+        <Button name="9" color />
+        <Button name="×" />
       </div>
-      <div>
-        <Button name="4" />
-        <Button name="5" />
-        <Button name="6" />
+      <div className="row">
+        <Button name="4" color />
+        <Button name="5" color />
+        <Button name="6" color />
         <Button name="-" />
       </div>
-      <div>
-        <Button name="1" />
-        <Button name="2" />
-        <Button name="3" />
+      <div className="row">
+        <Button name="1" color />
+        <Button name="2" color />
+        <Button name="3" color />
         <Button name="+" />
       </div>
-      <div>
-        <Button name="0" />
-        <Button name="." />
+      <div className="row">
+        <Button name="0" color wide />
+        <Button name="•" color />
         <Button name="=" />
       </div>
     </div>
