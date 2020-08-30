@@ -1,16 +1,17 @@
 .App {
   text-align: center;
-  height: 600px;
-  width: 400px;
+  height: 500px;
+  width: 700px;
   margin: 15vh auto;
 }
 
 .display {
-  height: 18%;
+  height: 100px;
+  background-color: grey;
 }
 
 .button-panel {
-  height: 80%;
+  height: 400px;
 }
 
 .row {
@@ -22,10 +23,9 @@
 .mdl-button {
   color: #6a6972;
   border: 1px solid #e5e5e5;
-  border-radius: 10px;
+  border-radius: 0;
   width: 25%;
   height: 80px;
-  margin: 0 2.5%;
   padding: 15px;
   font-size: 2rem;
   text-transform: none;
