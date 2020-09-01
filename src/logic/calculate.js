@@ -1,6 +1,6 @@
-import operate from "./operate";
+import operate from './operate';
 
-export default function calculate(data={ total: '', next: '', operation: ''}, buttonName) {
+export default function calculate(data = { total: '', next: '', operation: '' }, buttonName) {
   let { total, next } = data;
 
   if (buttonName === '+/-') {

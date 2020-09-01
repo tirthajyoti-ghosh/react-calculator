@@ -1,4 +1,4 @@
-import Big from './big.mjs';
+const Big = require('big.js');
 
 export default function operate(numberOne, numberTwo, operation) {
   const n1 = new Big(numberOne);
@@ -10,23 +10,23 @@ export default function operate(numberOne, numberTwo, operation) {
     case '+':
       result = n1.plus(n2);
       break;
-  
+
     case '-':
       result = n1.minus(n2);
       break;
-  
+
     case 'x':
       result = n1.times(n2);
       break;
-  
+
     case '/':
       result = n1.div(n2);
       break;
-  
+
     case '%':
       result = n1.mod(n2);
       break;
-  
+
     default:
       break;
   }
