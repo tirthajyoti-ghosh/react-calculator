@@ -22,26 +22,10 @@
 <!-- ABOUT THE PROJECT -->
 # React Calculator
 
-## Milestone-3 - Styled components
+## Milestone 4 - Logic
 
-* Used flex display mode for App, Display and ButtonPanel components
-    * The Calculator width is 700px.
-* Style the Display component
-    * It has a gray background.
-    * It has a height set to 100px.
-    * The result is presented with a white and bold text.
-    * The result has padding from the edges.
-    * The result is aligned to the right.
-* Styled the ButtonPanel component
-    * Each row (display and group buttons) has a height of 100 px.
-    * The Button groups is displayed horizontally in rows.
-* Styled the Button component
-    * Button should take 25% of the container width, except for the button that represents the “0” (zero).
-    * The text in the buttons is centered and displayed in black color.
-    * Each button has a border.
-* Passed “color” and “wide” props to the Button
-    * The `color` prop is used to customize the color of the button. If it is not passed, the button has an orange background by default.
-    * The `wide` prop accepts a boolean to indicate that the button has twice the standard width (used for the “0” button).
+* Logic directory inside /src that houses two files - `calculate` and `operate`
+* These two files are the brain of the calculator
 
 ### Built With
 
