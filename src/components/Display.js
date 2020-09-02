@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Display(props) {
   const { result } = props;
-  return <input type="text" className="display" value={result} />;
+  return <div className="display">{result}</div>;
 }
 
 Display.propTypes = {

@@ -16,11 +16,17 @@ class App extends React.Component {
     };
   }
 
+  handleClick(buttonName) {
+    console.log(buttonName);
+  }
+
   render() {
+    const { total } = this.state;
+
     return (
       <div className="App mdl-card mdl-shadow--2dp">
-        <Display />
-        <ButtonPanel />
+        <Display value={ total } />
+        <ButtonPanel clickHandler={ this.handleClick } />
       </div>
     );
   }
