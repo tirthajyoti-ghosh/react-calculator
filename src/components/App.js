@@ -14,18 +14,23 @@ class App extends React.Component {
       next: null,
       operation: null,
     };
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(buttonName) {
-    console.log(buttonName);
+    const { next } = this.state;
+    this.setState({
+      next: (next === null ? '' : next) + buttonName
+    });
   }
 
   render() {
-    const { total } = this.state;
+    const { next } = this.state;
 
     return (
       <div className="App mdl-card mdl-shadow--2dp">
-        <Display value={ total } />
+        <Display result={ next } />
         <ButtonPanel clickHandler={ this.handleClick } />
       </div>
     );
