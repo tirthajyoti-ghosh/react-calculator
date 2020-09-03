@@ -29,21 +29,18 @@ class App extends React.Component {
     return false;
   }
 
-  updateChain(operation) {
-    const { total } = this.state;
-
-    this.setState({
-      operation: operation,
-      next: null,
-      chain: `${total} ${operation}`
-    });
-  }
-
   handleClick(buttonName) {
-    const { next } = this.state;
+    const { next, total } = this.state;
 
     if (this.isOperator(buttonName)) {
-      this.updateChain(buttonName);
+      const newTotal = calculate(total, next, buttonName);
+
+      this.setState({
+        total: newTotal,
+        operation: buttonName,
+        next: null,
+        chain: `${total} ${buttonName}`,
+      });
     } else {
       this.setState({
         next: (next === null ? '' : next) + buttonName
