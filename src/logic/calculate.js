@@ -1,14 +1,13 @@
 import operate from './operate';
 
-export default function calculate(data = { total: '', next: '', operation: '' }, buttonName) {
-  let { total, next } = data;
+export default function calculate(total, next, operation) {
 
-  if (buttonName === '+/-') {
+  if (operation === '+/-') {
     total *= -1;
     next *= -1;
 
     return next;
   }
 
-  return operate(total, next, buttonName);
+  return operate(total, next, operation);
 }

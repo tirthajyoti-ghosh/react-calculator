@@ -5,8 +5,17 @@
   margin: 15vh auto;
 }
 
-.display {
-  height: 100px;
+.display .chain {
+  background-color: grey;
+  color: white;
+  font-size: 25px;
+  text-align: right;
+  padding: 20px 38px;
+  font-weight: bold;
+}
+
+.display .result {
+  height: 30px;
   background-color: grey;
   color: white;
   font-size: 60px;

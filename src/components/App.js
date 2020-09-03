@@ -18,6 +18,16 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  isOperator(buttonName) {
+    const operations = ['-', '+', 'x', '+/-', '%', '÷'];
+
+    for (let i = 0; i < operations.length; i+=1) {      
+      if (buttonName === operations[i]) return true;
+    }
+
+    return false;
+  }
+
   handleClick(buttonName) {
     const { next } = this.state;
     this.setState({
@@ -30,7 +40,7 @@ class App extends React.Component {
 
     return (
       <div className="App mdl-card mdl-shadow--2dp">
-        <Display result={ next } />
+        <Display result={ next === null ? '0' : next } />
         <ButtonPanel clickHandler={ this.handleClick } />
       </div>
     );
