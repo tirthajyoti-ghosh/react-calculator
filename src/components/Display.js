@@ -18,7 +18,7 @@ Display.propTypes = {
 
 Display.defaultProps = {
   result: '0',
-  chain: '56 x 9',
+  chain: '',
 };
 
 export default Display;

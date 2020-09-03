@@ -13,13 +13,14 @@ class App extends React.Component {
       total: null,
       next: null,
       operation: null,
+      chain: '',
     };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
   isOperator(buttonName) {
-    const operations = ['-', '+', 'x', '+/-', '%', '÷'];
+    const operations = ['-', '+', '×', '+/-', '%', '÷'];
 
     for (let i = 0; i < operations.length; i+=1) {      
       if (buttonName === operations[i]) return true;
@@ -28,11 +29,27 @@ class App extends React.Component {
     return false;
   }
 
+  updateChain(operation) {
+    const { total } = this.state;
+
+    this.setState({
+      operation: operation,
+      next: null,
+      chain: `${total} ${operation}`
+    });
+  }
+
   handleClick(buttonName) {
     const { next } = this.state;
-    this.setState({
-      next: (next === null ? '' : next) + buttonName
-    });
+
+    if (this.isOperator(buttonName)) {
+      this.updateChain(buttonName);
+    } else {
+      this.setState({
+        next: (next === null ? '' : next) + buttonName
+      });
+    }
+
   }
 
   render() {
@@ -40,7 +57,7 @@ class App extends React.Component {
 
     return (
       <div className="App mdl-card mdl-shadow--2dp">
-        <Display result={ next === null ? '0' : next } />
+        <Display result={ next === null ? '0' : next } chain={ this.state.chain } />
         <ButtonPanel clickHandler={ this.handleClick } />
       </div>
     );
