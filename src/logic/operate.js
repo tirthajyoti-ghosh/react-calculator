@@ -31,5 +31,5 @@ export default function operate(numberOne, numberTwo, operation) {
       break;
   }
 
-  return result;
+  return result.toPrecision();
 }

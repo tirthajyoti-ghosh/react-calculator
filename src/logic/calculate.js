@@ -1,7 +1,9 @@
 import operate from './operate';
 
 export default function calculate(total, next, operation) {
-  next = next === null ? 0 : next
+  if (total === null) {
+    total = operation === '+' || operation === '-' ? '0' : '1';
+  }
   
   if (operation === '+/-') {
     total *= -1;
@@ -10,5 +12,5 @@ export default function calculate(total, next, operation) {
     return next;
   }
 
-  return operate(total, next, operation);
+  return operate(parseFloat(total), parseFloat(next), operation);
 }
