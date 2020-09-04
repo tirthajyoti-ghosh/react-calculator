@@ -30,7 +30,20 @@ class App extends React.Component {
     return false;
   }
 
+  allClear() {
+    this.setState({
+      total: null,
+      operation: null,
+      next: null,
+    });
+  }
+
   handleClick(buttonName) {
+    if (buttonName === 'AC') {
+      this.allClear();
+      return;
+    }
+
     const { next, total, operation } = this.state;
 
     if (this.isOperator(buttonName)) {
