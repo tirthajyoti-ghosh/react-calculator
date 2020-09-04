@@ -16,6 +16,8 @@ class App extends React.Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
+
+    this.timesOperationButtonClicked = 0;
   }
 
   isOperator(buttonName) {
@@ -29,16 +31,26 @@ class App extends React.Component {
   }
 
   handleClick(buttonName) {
-    const { next, total } = this.state;
+    const { next, total, operation } = this.state;
 
     if (this.isOperator(buttonName)) {
-      const newTotal = calculate(total, next, buttonName);
+      this.timesOperationButtonClicked += 1;
 
-      this.setState({
-        total: newTotal,
-        operation: buttonName,
-        next: null,
-      });
+      if (this.timesOperationButtonClicked >= 2) {
+        const newTotal = calculate(total, next, operation);
+
+        this.setState({
+          total: newTotal,
+          operation: buttonName,
+          next: null,
+        });
+      } else {
+        this.setState({
+          total: next,
+          operation: buttonName,
+          next: null,
+        });
+      }
     } else {
       this.setState({
         next: (next === null ? '' : next) + buttonName
