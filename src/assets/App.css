@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  height: 645px;
+  height: 665px;
   width: 700px;
   margin: 15vh auto;
 }
@@ -12,6 +12,7 @@
   text-align: right;
   padding: 20px 38px;
   font-weight: bold;
+  height: 20px;
 }
 
 .display .result {

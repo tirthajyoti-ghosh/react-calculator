@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Display(props) {
-  const { result, chain } = props;
+  const { result, total, operation } = props;
   return (
     <div className="display">
-      <div className="chain">{chain}</div>
+      <div className="chain">
+        <span>{ total }</span>&nbsp;<span>{ operation }</span>
+      </div>
       <div className="result">{result}</div>
     </div>
   );

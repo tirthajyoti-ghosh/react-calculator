@@ -34,7 +34,7 @@ function ButtonPanel(props) {
       </div>
       <div className="row">
         <Button clickHandler={ handleClick } name="0" color wide />
-        <Button clickHandler={ handleClick } name="•" color />
+        <Button clickHandler={ handleClick } name="." color />
         <Button clickHandler={ handleClick } name="=" />
       </div>
     </div>

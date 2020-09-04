@@ -13,7 +13,6 @@ class App extends React.Component {
       total: null,
       next: null,
       operation: null,
-      chain: '',
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -39,7 +38,6 @@ class App extends React.Component {
         total: newTotal,
         operation: buttonName,
         next: null,
-        chain: `${total} ${buttonName}`,
       });
     } else {
       this.setState({
@@ -50,11 +48,11 @@ class App extends React.Component {
   }
 
   render() {
-    const { next } = this.state;
+    const { next, total, operation } = this.state;
 
     return (
       <div className="App mdl-card mdl-shadow--2dp">
-        <Display result={ next === null ? '0' : next } chain={ this.state.chain } />
+        <Display result={ next === null ? '0' : next } total={ total } operation={operation} />
         <ButtonPanel clickHandler={ this.handleClick } />
       </div>
     );
