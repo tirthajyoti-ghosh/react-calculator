@@ -38,9 +38,20 @@ class App extends React.Component {
     });
   }
 
+  appendZero() {
+    if (this.state.next !== null) {
+      this.setState({ next: this.state.next + '0' });
+    }
+  }
+
   handleClick(buttonName) {
     if (buttonName === 'AC') {
       this.allClear();
+      return;
+    }
+
+    if (buttonName === '0'){
+      this.appendZero(); 
       return;
     }
 
