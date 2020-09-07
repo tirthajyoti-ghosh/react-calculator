@@ -2,7 +2,6 @@ import React from 'react';
 import '../assets/App.css';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
-// eslint-disable-next-line no-unused-vars
 import calculate from '../logic/calculate';
 
 class App extends React.Component {
@@ -44,6 +43,15 @@ class App extends React.Component {
     }
   }
 
+  appendDot() {
+    let { next } = this.state;
+    next = next === null ? '' : next;
+
+    if (next.indexOf('.') === -1) {
+      this.setState({ next: next + '.' });
+    }
+  }
+
   handleClick(buttonName) {
     if (buttonName === 'AC') {
       this.allClear();
@@ -52,6 +60,11 @@ class App extends React.Component {
 
     if (buttonName === '0'){
       this.appendZero(); 
+      return;
+    }
+
+    if (buttonName === '.'){
+      this.appendDot(); 
       return;
     }
 
