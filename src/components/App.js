@@ -19,7 +19,7 @@ class App extends React.Component {
     this.timesOperationButtonClicked = 0;
   }
 
-  isOperator(buttonName) {
+  isOperator(buttonName) { // eslint-disable-line class-methods-use-this
     const operations = ['-', '+', '×', '%', '÷'];
 
     for (let i = 0; i < operations.length; i += 1) {
@@ -38,8 +38,10 @@ class App extends React.Component {
   }
 
   appendZero() {
-    if (this.state.next !== null) {
-      this.setState({ next: `${this.state.next}0` });
+    const { next } = this.state;
+
+    if (next !== null) {
+      this.setState({ next: `${next}0` });
     }
   }
 
@@ -70,9 +72,9 @@ class App extends React.Component {
       return;
     }
 
-    if (buttonName === '+/-') {      
+    if (buttonName === '+/-') {
       this.setState({
-        next: `${calculate(next, next, '+/-')}`
+        next: `${calculate(next, next, '+/-')}`,
       });
 
       return;

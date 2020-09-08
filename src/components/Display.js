@@ -16,13 +16,15 @@ function Display(props) {
 }
 
 Display.propTypes = {
-  result: PropTypes.string.isRequired,
-  chain: PropTypes.string,
+  result: PropTypes.string,
+  total: PropTypes.string,
+  operation: PropTypes.string,
 };
 
 Display.defaultProps = {
   result: '0',
-  chain: '',
+  total: '',
+  operation: '',
 };
 
 export default Display;
