@@ -70,11 +70,9 @@ class App extends React.Component {
       return;
     }
 
-    if (buttonName === '+/-') {
-      console.log('+/-');
-      
+    if (buttonName === '+/-') {      
       this.setState({
-        next: calculate(next, next, '+/-')
+        next: `${calculate(next, next, '+/-')}`
       });
 
       return;
