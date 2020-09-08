@@ -88,7 +88,7 @@ Concepts used:
 
 ## Live demo
 
-Deployed to Raw Githack - [live demo](https://rawcdn.githack.com/tirthajyoti-ghosh/react-calculator/0b69b93c02b080fa740a2ec65031f403675c142d/dist/index.html).
+Deployed to Heroku - [live demo](https://gentle-ocean-35043.herokuapp.com/).
 
 <!-- GETTING STARTED -->
 ## Getting Started
