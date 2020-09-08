@@ -15,11 +15,11 @@ export default function operate(numberOne, numberTwo, operation) {
       result = n1.minus(n2);
       break;
 
-    case 'x':
+    case '×':
       result = n1.times(n2);
       break;
 
-    case '/':
+    case '÷':
       result = n1.div(n2);
       break;
 
@@ -31,5 +31,5 @@ export default function operate(numberOne, numberTwo, operation) {
       break;
   }
 
-  return result;
+  return result.toPrecision();
 }

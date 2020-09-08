@@ -1,14 +1,16 @@
 import operate from './operate';
 
-export default function calculate(data = { total: '', next: '', operation: '' }, buttonName) {
-  let { total, next } = data;
+export default function calculate(total, next, operation) {
+  if (total === null) {
+    total = operation === '+' || operation === '-' ? '0' : '1'; // eslint-disable-line no-param-reassign
+  }
 
-  if (buttonName === '+/-') {
-    total *= -1;
-    next *= -1;
+  if (operation === '+/-') {
+    total *= -1; // eslint-disable-line no-param-reassign
+    next *= -1; // eslint-disable-line no-param-reassign
 
     return next;
   }
 
-  return operate(total, next, buttonName);
+  return operate(parseFloat(total), parseFloat(next), operation);
 }

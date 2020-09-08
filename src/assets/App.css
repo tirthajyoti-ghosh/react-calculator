@@ -1,17 +1,28 @@
 .App {
   text-align: center;
-  height: 600px;
+  height: 665px;
   width: 700px;
   margin: 15vh auto;
 }
 
-.display {
-  height: 100px;
+.display .chain {
+  background-color: grey;
+  color: white;
+  font-size: 25px;
+  text-align: right;
+  padding: 20px 38px;
+  font-weight: bold;
+  height: 20px;
+}
+
+.display .result {
+  height: 30px;
   background-color: grey;
   color: white;
   font-size: 60px;
   text-align: right;
-  padding: 20px;
+  padding: 38px;
+  font-weight: bold;
 }
 
 .button-panel {
