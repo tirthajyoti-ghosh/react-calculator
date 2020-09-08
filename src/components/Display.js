@@ -6,7 +6,9 @@ function Display(props) {
   return (
     <div className="display">
       <div className="chain">
-        <span>{ total }</span>&nbsp;<span>{ operation }</span>
+        <span>{ total }</span>
+        &nbsp;
+        <span>{ operation }</span>
       </div>
       <div className="result">{result}</div>
     </div>

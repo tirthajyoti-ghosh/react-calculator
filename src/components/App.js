@@ -22,7 +22,7 @@ class App extends React.Component {
   isOperator(buttonName) {
     const operations = ['-', '+', '×', '+/-', '%', '÷'];
 
-    for (let i = 0; i < operations.length; i+=1) {      
+    for (let i = 0; i < operations.length; i += 1) {
       if (buttonName === operations[i]) return true;
     }
 
@@ -39,7 +39,7 @@ class App extends React.Component {
 
   appendZero() {
     if (this.state.next !== null) {
-      this.setState({ next: this.state.next + '0' });
+      this.setState({ next: `${this.state.next}0` });
     }
   }
 
@@ -48,8 +48,18 @@ class App extends React.Component {
     next = next === null ? '' : next;
 
     if (next.indexOf('.') === -1) {
-      this.setState({ next: next + '.' });
+      this.setState({ next: `${next}.` });
     }
+  }
+
+  displayResult() {
+    const { next, total, operation } = this.state;
+
+    this.setState({
+      next: calculate(total, next, operation),
+      operation: null,
+      total: null,
+    });
   }
 
   handleClick(buttonName) {
@@ -58,17 +68,28 @@ class App extends React.Component {
       return;
     }
 
-    if (buttonName === '0'){
-      this.appendZero(); 
+    if (buttonName === '0') {
+      this.appendZero();
       return;
     }
 
-    if (buttonName === '.'){
-      this.appendDot(); 
+    if (buttonName === '.') {
+      this.appendDot();
       return;
     }
 
     const { next, total, operation } = this.state;
+
+    if (buttonName === '=') {
+      if (next === null) {
+        return;
+      }
+      this.displayResult();
+
+      this.timesOperationButtonClicked = 0;
+
+      return;
+    }
 
     if (this.isOperator(buttonName)) {
       if (next === null) {
@@ -94,10 +115,9 @@ class App extends React.Component {
       }
     } else {
       this.setState({
-        next: (next === null ? '' : next) + buttonName
+        next: (next === null ? '' : next) + buttonName,
       });
     }
-
   }
 
   render() {
@@ -105,8 +125,8 @@ class App extends React.Component {
 
     return (
       <div className="App mdl-card mdl-shadow--2dp">
-        <Display result={ next === null ? '0' : next } total={ total } operation={operation} />
-        <ButtonPanel clickHandler={ this.handleClick } />
+        <Display result={next === null ? '0' : next} total={total} operation={operation} />
+        <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
   }

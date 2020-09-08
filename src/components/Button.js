@@ -13,14 +13,16 @@ function Button(props) {
     backgroundColor: color ? '' : 'orange',
   };
 
-  return <button 
-          type="button" 
-          className="mdl-button mdl-js-button mdl-js-ripple-effect" 
-          onClick={ () => { handleClick(name); }}
-          style={style}
-          >
-            {name}
-          </button>;
+  return (
+    <button
+      type="button"
+      className="mdl-button mdl-js-button mdl-js-ripple-effect"
+      onClick={() => { handleClick(name); }}
+      style={style}
+    >
+      {name}
+    </button>
+  );
 }
 
 Button.propTypes = {
