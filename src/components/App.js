@@ -71,6 +71,10 @@ class App extends React.Component {
     const { next, total, operation } = this.state;
 
     if (this.isOperator(buttonName)) {
+      if (next === null) {
+        return;
+      }
+
       this.timesOperationButtonClicked += 1;
 
       if (this.timesOperationButtonClicked >= 2) {
