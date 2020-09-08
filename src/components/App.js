@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   isOperator(buttonName) {
-    const operations = ['-', '+', '×', '+/-', '%', '÷'];
+    const operations = ['-', '+', '×', '%', '÷'];
 
     for (let i = 0; i < operations.length; i += 1) {
       if (buttonName === operations[i]) return true;
@@ -63,8 +63,20 @@ class App extends React.Component {
   }
 
   handleClick(buttonName) {
+    const { next, total, operation } = this.state;
+
     if (buttonName === 'AC') {
       this.allClear();
+      return;
+    }
+
+    if (buttonName === '+/-') {
+      console.log('+/-');
+      
+      this.setState({
+        next: calculate(next, next, '+/-')
+      });
+
       return;
     }
 
@@ -77,8 +89,6 @@ class App extends React.Component {
       this.appendDot();
       return;
     }
-
-    const { next, total, operation } = this.state;
 
     if (buttonName === '=') {
       if (next === null) {
